@@ -1,0 +1,32 @@
+$minPadding = 100px
+$maxpadding = 200px
+$fmaxpadding = - 200px
+$fminpadding = - 100px
+  
+border-spacing()
+  @media screen and (min-width: 1350px)
+    padding 120px $maxpadding 0px $maxpadding
+  @media screen and (max-width: 1350px)
+    padding 120px $minPadding 0px $minPadding
+introduce-spacing()
+  @media screen and (min-width: 1350px)
+    width "calc( 100% - %s)" % (2*$maxpadding)
+  @media screen and (max-width: 1350px)
+    width "calc( 100% - %s)" % (2*$minPadding)         
+image()    
+  @media screen and (min-width: 1350px)
+    width 'calc( 100% + %s)' % (2 * $maxpadding)
+    margin-left $fmaxpadding
+    padding 100px $maxpadding
+  @media screen and (max-width: 1350px)
+    width 'calc( 100% + %s)' % (2 * $minPadding)
+    margin-left $fminpadding
+    padding 100px $minPadding
+
+center()
+   width 80%
+   margin-left auto 
+   margin-right auto
+   padding-left 5%
+   padding-right 5%
+  //  box-sizing border-box
